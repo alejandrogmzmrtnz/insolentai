@@ -1,310 +1,288 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insolent AI</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* Estilos generales y ajustes */
-      body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f0f8ff; /* Color de fondo suave */
-        color: #333;
-      }
-
-      header {
-        background-color: #003366; /* Azul oscuro */
-        color: #ffffff;
-        padding: 20px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-        border-radius: 8px; /* Bordes redondeados */
-      }
-
-      header img {
-        width: 100px; /* Tamaño del logo */
-        height: auto;
-      }
-
-      header h1 {
-        color: #ffffff;
-        margin: 0;
-      }
-
-      nav {
-        background-color: #0077cc; /* Azul brillante */
-        padding: 15px;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      nav a {
-        color: #ffffff;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 8px 16px;
-        border-radius: 5px; /* Bordes redondeados en enlaces */
-        transition: background-color 0.3s; /* Transición suave */
-      }
-
-      nav a:hover {
-        background-color: #005fa3; /* Color de fondo al pasar el mouse */
-      }
-
-      section {
-        padding: 20px;
-        margin: 15px;
-        background-color: #ffffff; /* Blanco limpio */
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      footer {
-        text-align: center;
-        padding: 20px;
-        background-color: #003366;
-        color: #ffffff;
-        margin-top: 20px;
-      }
-
-      .img-container {
-        float: left; /* Alinea la imagen a la izquierda */
-        margin-right: 15px; /* Espacio a la derecha de la imagen */
-      }
-
-      .img-pequeño {
-        width: 150px; /* Tamaño pequeño para la imagen */
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para imágenes */
-      }
-
-      .img-medium {
-        width: 300px; /* Tamaño mediano para la imagen */
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para imágenes */
-      }
-
-      /* Estilo para el video */
-      video {
-        max-width: 100%; /* Hacer el video responsivo */
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Estilos responsivos */
-      @media (max-width: 768px) {
-        .img-container {
-          float: none;
-          text-align: center;
+        /* Estilos generales y ajustes */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f2ff; /* Color de fondo suave */
+            color: #333;
         }
 
         header {
-          flex-direction: column;
+            background-color: #004080; /* Azul oscuro */
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        header img {
+            width: 100px; /* Tamaño del logo */
+            height: auto;
+        }
+
+        /* Cambiando el color del texto "Insolent AI" a blanco */
+        header h1 {
+            color: #ffffff;
+            margin: 0;
+        }
+
+        header p {
+            color: #ffffff; /* Color blanco para el texto debajo del logo */
+            margin: 0; /* Elimina margen */
+            font-size: 1.2em; /* Tamaño del texto */
+        }
+
+        nav {
+            background-color: #0066cc; /* Azul brillante */
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
-          display: block; /* Hacer que los enlaces ocupen toda la línea en dispositivos pequeños */
-          margin: 5px 0;
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
-      }
 
-      /* Estilos específicos para el equipo */
-      .team {
-        display: flex;
-        justify-content: space-around; /* Espacio uniforme entre miembros del equipo */
-        flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en pantallas pequeñas */
-        margin-top: 20px;
-      }
+        nav a:hover {
+            color: #e6f2ff;
+        }
 
-      .team-member {
-        text-align: center;
-        margin: 10px;
-        flex: 1 0 200px; /* Permite que los elementos crezcan y se encojan */
-      }
+        section {
+            padding: 20px;
+            margin: 15px;
+            background-color: #ffffff; /* Blanco limpio */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #004080;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .img-container {
+            float: left; /* Alinea la imagen a la izquierda */
+            margin-right: 15px; /* Espacio a la derecha de la imagen */
+        }
+
+        .img-pequeño {
+            width: 150px; /* Tamaño pequeño para la imagen */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .img-medium {
+            width: 300px; /* Tamaño mediano para la imagen */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .img-container {
+                float: none;
+                text-align: center;
+            }
+
+            header {
+                flex-direction: column;
+            }
+        }
+
+        /* Estilos adicionales para modernizar la página */
+        section h2 {
+            color: #004080; /* Color de los encabezados */
+            border-bottom: 2px solid #0066cc; /* Línea inferior */
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0; /* Permite que el menú se quede fijo en la parte superior al desplazarse */
+            z-index: 1000; /* Asegura que el menú esté sobre otros elementos */
+        }
+
+        .btn {
+            background-color: #0066cc; /* Botón azul */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #004080; /* Color de fondo al pasar el ratón */
+        }
+
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <img src="logo.jpg" alt="Logo de Insolent AI" />
-      <h1>Insolent AI</h1>
-      <p>Liderando el futuro con soluciones avanzadas de inteligencia artificial</p>
+        <!-- Añadido el logo -->
+        <img src="logo.jpg" alt="Logo de Insolent AI" />
+        <h1>Insolent AI</h1>
+        <p>Insolent AI</p>
+        <p>Liderando el futuro con soluciones avanzadas de inteligencia artificial</p>
     </header>
 
     <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#seguridad">Inteligencia Artificial</a>
-      <a href="#blog">Blog</a> <!-- Añadido enlace al blog -->
-      <a href="#contacto">Contacto</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#seguridad">Inteligencia Artificial</a>
+        <a href="#blog">Blog</a>
+        <a href="#contacto">Contacto</a>
     </nav>
 
     <section id="inicio">
-      <h2>Información General</h2>
-      <div class="img-container">
-        <img src="foto1.jpg" alt="Futuro con Inteligencia Artificial" class="img-pequeño" />
-      </div>
-      <p>
-        <strong>Insolent AI</strong> es una empresa pionera en la implementación
-        de soluciones de inteligencia artificial en diversas industrias. Nos
-        especializamos en el desarrollo de sistemas que optimizan procesos,
-        mejoran la toma de decisiones y transforman datos en conocimientos
-        accionables.
-      </p>
+        <h2>Información General</h2>
+        <div class="img-container">
+            <img src="foto1.jpg" alt="Futuro con Inteligencia Artificial" class="img-pequeño" />
+        </div>
+        <p>
+            <strong>Insolent AI</strong> es una empresa pionera en la implementación
+            de soluciones de inteligencia artificial en diversas industrias. Nos
+            especializamos en el desarrollo de sistemas que optimizan procesos,
+            mejoran la toma de decisiones y transforman datos en conocimientos
+            accionables.
+        </p>
     </section>
 
     <section id="servicios">
-      <h2>Servicios</h2>
-      <p>Nuestras soluciones incluyen:</p>
-      <ul>
-        <li>
-          Desarrollo de modelos de aprendizaje automático para la automatización
-          de procesos empresariales.
-        </li>
-        <li>
-          Implementación de sistemas de reconocimiento de voz y procesamiento
-          del lenguaje natural (NLP).
-        </li>
-        <li>
-          Plataformas de análisis de datos basadas en IA para predecir
-          tendencias de mercado.
-        </li>
-        <li>
-          Sistemas inteligentes para optimización logística y predicción de
-          demanda.
-        </li>
-      </ul>
+        <h2>Servicios</h2>
+        <p>Nuestras soluciones incluyen:</p>
+        <ul>
+            <li>
+                Desarrollo de modelos de aprendizaje automático para la automatización
+                de procesos empresariales.
+            </li>
+            <li>
+                Implementación de sistemas de reconocimiento de voz y procesamiento
+                del lenguaje natural (NLP).
+            </li>
+            <li>
+                Plataformas de análisis de datos basadas en IA para predecir
+                tendencias de mercado.
+            </li>
+            <li>
+                Sistemas inteligentes para optimización logística y predicción de
+                demanda.
+            </li>
+        </ul>
     </section>
 
     <section id="seguridad">
-      <h2>Aplicaciones de Inteligencia Artificial</h2>
-      <h3>Transformando el Mundo con IA</h3>
-      <p>
-        La inteligencia artificial está cambiando radicalmente la forma en que
-        interactuamos con el mundo. Desde la automatización de tareas
-        repetitivas hasta la toma de decisiones más precisa, la IA abre un nuevo
-        horizonte para la innovación en casi todos los sectores.
-      </p>
+        <h2>Aplicaciones de Inteligencia Artificial</h2>
+        <h3>Transformando el Mundo con IA</h3>
+        <p>
+            La inteligencia artificial está cambiando radicalmente la forma en que
+            interactuamos con el mundo. Desde la automatización de tareas
+            repetitivas hasta la toma de decisiones más precisa, la IA abre un nuevo
+            horizonte para la innovación en casi todos los sectores.
+        </p>
 
-      <h3>Aplicaciones Comunes de la IA</h3>
-      <p>
-        La IA tiene aplicaciones amplias y diversas. Algunos ejemplos incluyen:
-      </p>
-      <ul>
-        <li>
-          <strong>Asistentes virtuales:</strong> Alexa, Siri, Google Assistant,
-          entre otros, que interactúan con usuarios mediante reconocimiento de
-          voz.
-        </li>
-        <li>
-          <strong>Sistemas de recomendación:</strong> Plataformas como Netflix o
-          Amazon utilizan IA para sugerir contenido y productos personalizados.
-        </li>
-        <li>
-          <strong>Análisis predictivo:</strong> Empresas utilizan modelos de IA
-          para predecir comportamientos de clientes o anticipar fallos en
-          maquinaria.
-        </li>
-        <li>
-          <strong>Vehículos autónomos:</strong> Coches como los de Tesla
-          utilizan IA para navegar sin intervención humana.
-        </li>
-      </ul>
-      <img src="foto2.png" alt="Soluciones de Inteligencia Artificial" class="img-medium" />
+        <h3>Aplicaciones Comunes de la IA</h3>
+        <p>
+            La IA tiene aplicaciones amplias y diversas. Algunos ejemplos incluyen:
+        </p>
+        <ul>
+            <li>
+                <strong>Asistentes virtuales:</strong> Alexa, Siri, Google Assistant,
+                entre otros, que interactúan con usuarios mediante reconocimiento de
+                voz.
+            </li>
+            <li>
+                <strong>Sistemas de recomendación:</strong> Plataformas como Netflix o
+                Amazon utilizan IA para sugerir contenido y productos personalizados.
+            </li>
+            <li>
+                <strong>Análisis predictivo:</strong> Empresas utilizan modelos de IA
+                para predecir comportamientos de clientes o anticipar fallos en
+                maquinaria.
+            </li>
+            <li>
+                <strong>Vehículos autónomos:</strong> Coches como los de Tesla
+                utilizan IA para navegar sin intervención humana.
+            </li>
+        </ul>
+        <img src="foto2.png" alt="Soluciones de Inteligencia Artificial" class="img-medium" />
     </section>
 
     <section id="blog">
-      <h2>Blog</h2>
-      <h3>Funciones de un CPD</h3>
-      <h3>Video: Funciones de un CPD</h3>
-      <div style="text-align:center;">
-        <video width="560" height="315" controls>
-          <source src="tiers.mp4" type="video/mp4">
-          Tu navegador no soporta la reproducción de videos.
-        </video>
-      </div>
-      <h3>Seguridad Física: Control de Acceso al CPD</h3>
-      <h3>¿Qué es un CPD?</h3>
-      <p>
-        Un <strong>Centro de Proceso de Datos (CPD)</strong> es una instalación
-        dedicada al almacenamiento, procesamiento y gestión de grandes
-        cantidades de datos. En estos centros se alojan servidores y sistemas de
-        información críticos para empresas, y su seguridad es esencial para
-        proteger la información sensible.
-      </p>
-      <p>
-        Para garantizar la seguridad en un CPD, las medidas físicas más comunes
-        incluyen:
-      </p>
-      <ul>
-        <li>
-          <strong>Control de acceso restringido:</strong> Solo personal
-          autorizado puede acceder al CPD, y esto se gestiona a través de
-          sistemas de identificación avanzados.
-        </li>
-        <li>
-          <strong>Monitorización por cámaras de seguridad:</strong> Cámaras de
-          circuito cerrado (CCTV) monitorean constantemente las áreas sensibles.
-        </li>
-        <li>
-          <strong>Barreras físicas:</strong> Puertas reforzadas, cerraduras
-          electromagnéticas y barreras de seguridad impiden accesos no
-          autorizados.
-        </li>
-        <li>
-          <strong>Sistemas de detección de intrusos:</strong> Alarmas y sensores
-          de movimiento alertan sobre cualquier actividad no autorizada dentro o
-          alrededor del CPD.
-        </li>
-      </ul>
+        <h2>Blog</h2>
+        <h3>Seguridad Física: Control de Acceso al CPD</h3>
+        <h4>¿Qué es un CPD?</h4>
+        <p>
+            Un <strong>Centro de Proceso de Datos (CPD)</strong> es una instalación
+            dedicada al almacenamiento, procesamiento y gestión de grandes
+            cantidades de datos. En estos centros se alojan servidores y sistemas de
+            información críticos para empresas, y su seguridad es esencial para
+            evitar interrupciones o accesos no autorizados.
+        </p>
 
-      <h3>Dispositivos Comunes de Control de Acceso</h3>
-      <p>
-        Algunos de los dispositivos más comunes para el control de acceso a un
-        CPD incluyen:
-      </p>
-      <ul>
-        <li>
-          <strong>Tarjetas de proximidad:</strong> Utilizadas por el personal
-          autorizado para desbloquear puertas mediante la tecnología RFID.
-        </li>
-        <li>
-          <strong>Sistemas biométricos:</strong> Identificación mediante huellas
-          dactilares, reconocimiento facial o escáner de iris para garantizar
-          que solo personas específicas puedan acceder.
-        </li>
-        <li>
-          <strong>Cámaras de seguridad:</strong> Monitoreo constante para
-          registrar cualquier actividad sospechosa en las inmediaciones del CPD.
-        </li>
-        <li>
-          <strong>Cerraduras electrónicas:</strong> Controladas de manera
-          remota, permiten o deniegan el acceso a áreas críticas del CPD.
-        </li>
-      </ul>
+        <h4>Medidas Comunes de Seguridad Física en un CPD</h4>
+        <p>
+            Para garantizar la seguridad en un CPD, las medidas físicas más comunes
+            incluyen:
+        </p>
+        <ul>
+            <li>
+                <strong>Control de acceso restringido:</strong> Solo personal
+                autorizado puede acceder al CPD, y esto se gestiona a través de
+                sistemas de identificación avanzados.
+            </li>
+            <li>
+                <strong>Monitorización por cámaras de seguridad:</strong> Cámaras de
+                circuito cerrado (CCTV) monitorean constantemente las áreas sensibles.
+            </li>
+            <li>
+                <strong>Barreras físicas:</strong> Puertas reforzadas, cerraduras
+                electromagnéticas y barreras de seguridad impiden accesos no
+                autorizados.
+            </li>
+            <li>
+                <strong>Sistemas de detección de intrusos:</strong> Alarmas y sensores
+                que alertan sobre cualquier intento de acceso no autorizado.
+            </li>
+        </ul>
+        <h3>Funciones de un CPD</h3>
+        <video width="320" height="240" controls>
+            <source src="tiers.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
     </section>
 
     <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Para más información, puedes ponerte en contacto con nosotros:</p>
-      <ul>
-        <li>Correo electrónico: info@insolentai.com</li>
-        <li>Teléfono: +34 123 456 789</li>
-      </ul>
+        <h2>Contacto</h2>
+        <p>Para más información, puedes ponerte en contacto con nosotros:</p>
+        <ul>
+            <li>Correo electrónico: info@insolentai.com</li>
+            <li>Teléfono: +34 123 456 789</li>
+        </ul>
     </section>
 
     <footer>
-      <p>&copy; 2024 Insolent AI. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Insolent AI. Todos los derechos reservados.</p>
     </footer>
-  </body>
+</body>
 </html>
